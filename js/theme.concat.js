@@ -14,7 +14,7 @@ if (Modernizr.history) {
             prefetch: true,
             cacheLength: 2,
             onStart: {
-                duration: 750, // Duration of our animation
+                duration: 500, // Duration of our animation
                 render: function ($container) {
                     // Add your CSS animation reversing class
                     $container.removeClass('is-finished');
@@ -106,6 +106,11 @@ var headerScroll = function()
             $header.removeClass("shrink");
         }
     });
+};
+
+var mobileNav = function()
+{
+    var $navItem = $('.js-nav-main-item');
 };
 
 var mobileNavSettings
