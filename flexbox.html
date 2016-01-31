@@ -19,43 +19,6 @@
     <!-- Custom modernizr build: http://modernizr.com — load other JavaScript at the end of document -->
     <script src="vendor/modernizr/modernizr.js"></script>
 
-    <script>
-        (function(d) {
-            var config = {
-            kitId: 'iyj7qix',
-            scriptTimeout: 3000,
-            async: true
-        },
-        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-        })(document);
-    </script>
-
-    <script type="text/javascript">
-        (function() {
-            var path = '//easy.myfonts.net/v2/js?sid=189446(font-family=PF+Din+Mono+Medium)&sid=189455(font-family=PF+Din+Mono)&sid=189457(font-family=PF+Din+Mono+Light)&sid=189459(font-family=PF+Din+Mono+Bold)&key=KPQiQ9cOAk',
-                protocol = ('https:' == document.location.protocol ? 'https:' : 'http:'),
-                trial = document.createElement('script');
-            trial.type = 'text/javascript';
-            trial.async = true;
-            trial.src = protocol + path;
-            var head = document.getElementsByTagName("head")[0];
-            head.appendChild(trial);
-        })();
-    </script>
-
-    <script type="text/javascript">
-        (function() {
-            var path = '//easy.myfonts.net/v2/js?sid=161376(font-family=FF+DIN+Pro+Medium)&sid=161377(font-family=FF+DIN+Pro+Light)&sid=161380(font-family=FF+DIN+Pro+Bold)&sid=161660(font-family=FF+DIN+OT)&key=9G4ErMVWTr',
-                protocol = ('https:' == document.location.protocol ? 'https:' : 'http:'),
-                trial = document.createElement('script');
-            trial.type = 'text/javascript';
-            trial.async = true;
-            trial.src = protocol + path;
-            var head = document.getElementsByTagName("head")[0];
-            head.appendChild(trial);
-        })();
-    </script>
-
     <link href="//cloud.webtype.com/css/1bfbe0d5-3829-439b-9eda-83f5094875f5.css" rel="stylesheet" type="text/css" />
 
     <!-- Stylesheets -->
@@ -72,18 +35,18 @@
 
 
 <body class="c-flexbox">
-
-    <!-- Deprecated browser alert -->
-    <!--[if lt IE 9]>
+    <div class="c-scene" id="js-smoothstate">
+        <!-- Deprecated browser alert -->
+        <!--[if lt IE 9]>
 <div class="c-alert-box">
     <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 </div>
 <![endif]-->
 
-    <!-- End deprecated browser alert -->
+        <!-- End deprecated browser alert -->
 
-    <!-- Page header -->
-    <div class="js-header c-row c-header-row u-z-jota">
+        <!-- Page header -->
+        <div class="js-header c-row c-header-row u-z-jota">
     <div class="o-container c-header-container">
         <div class="c-header">
 
@@ -105,7 +68,7 @@
 
 
         <li class="c-nav-main__item ">
-            <a href="grid.html" class="c-nav-main__link">Het lab</a>
+            <a href="fablab.html" class="c-nav-main__link">Fablab</a>
         </li>
         <li class="c-nav-main__item ">
             <a href="agenda.html" class="c-nav-main__link">Agenda</a>
@@ -123,10 +86,10 @@
     </div>
 </div>
 
-    <!-- End page header -->
-    <div class="c-main">
+        <!-- End page header -->
+        <div class="c-main c-scene__main c-scene__element">
 
-        <div class="c-row c-style-flexbox-intro o-flex o-flex--justify-center o-flex--align-center">
+            <div class="c-row c-style-flexbox-intro o-flex o-flex--justify-center o-flex--align-center">
     <div class="o-container u-text-align-center u-align-vertical">
         <h1 class="u-color-neutral-x-light">Flexbox</h1>
         <p class="u-color-neutral-light">This div is placed in a flexbox container width justify and align set to center.</p>
@@ -364,8 +327,8 @@
 </div>
 
 
-        <!-- Page footer -->
-        <footer class="c-row c-row--xl u-bgcolor-alpha-base">
+            <!-- Page footer -->
+            <footer class="c-row c-row--xl u-bgcolor-alpha-base">
     <div class="o-container">
         <div class="c-main-section">
             <p class="u-color-alpha-xx-light u-font-weight-jota u-max-width-sm u-ms4 s-content">
@@ -423,7 +386,8 @@
     </div>
 </footer>
 
-        <!-- End page footer -->
+            <!-- End page footer -->
+        </div>
     </div>
     <!-- Footer javascript -->
     <!-- Always Load jQuery First -->
@@ -434,6 +398,7 @@
 <!--[if IE 8 | IE 7]><script src="/vendor/respond/dest/respond.min.js"></script><![endif]-->
 
 <!-- Theme specific JavaScript. Add your other scripts here -->
+<script src="vendor/smoothstate/jquery.smoothState.min.js"></script>
 <script src="js/theme.concat.js"></script>
 
     <!-- End footer javascript -->

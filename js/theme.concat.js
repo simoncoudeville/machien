@@ -1,13 +1,65 @@
+// // ---
+// // Add smooth page transitions for an app like feel
+// // -
+// // Source: https://github.com/weblinc/jquery.smoothState.js
+// // ---
+//
+// Smoothstate only works if history is supported so we use a Modernizr wrapper
+if (Modernizr.history) {
+
+    $(function() {
+        'use strict';
+        var options = {
+            debug: false,
+            prefetch: true,
+            cacheLength: 2,
+            onStart: {
+                duration: 750, // Duration of our animation
+                render: function ($container) {
+                    // Add your CSS animation reversing class
+                    $container.removeClass('is-finished');
+                    $container.addClass('is-exiting');
+                    // $("html, body").animate({ scrollTop: 0 });
+
+                    // Restart your animation
+                    smoothState.restartCSSAnimations();
+                }
+            },
+            onReady: {
+                duration: 500, // Duration of our animation
+                render: function ($container, $newContent) {
+                    // Remove your CSS animation reversing class
+                    $container.removeClass('is-exiting');
+                    $container.addClass('is-finished');
+                    // Inject the new content
+                    $container.html($newContent);
+
+                }
+            },
+            onAfter: function($container, $newContent) {
+                // load javascript
+                pluginLoader();
+            }
+        },
+
+        smoothState = $('#js-smoothstate').smoothState(options).data('smoothState');
+    });
+}
+
 var chopstick =
 {
     // init, something like a constructor
     init: function()
     {
-        chopstick.loadObject(chopstick.mobileNav, 'chopstick.mobileNav');
-        // chopstick.loadObject(chopstick.hide, 'chopstick.hide');
-        // chopstick.loadObject(chopstick.toggle, 'chopstick.toggle');
-        chopstick.loadObject(chopstick.headerScroll, 'chopstick.headerScroll');
-        chopstick.loadObject(chopstick.ready, 'chopstick.ready');
+        // chopstick.loadObject(chopstick.mobileNav, 'chopstick.mobileNav');
+        // chopstick.loadObject(chopstick.headerScroll, 'chopstick.headerScroll');
+        // chopstick.loadObject(chopstick.ready, 'chopstick.ready');
+
+        // chopstick.mobileNav;
+        // chopstick.headerScroll;
+        // chopstick.ready;
+
+        headerScroll();
 
         console.log("javascript is locked and loaded!") // for testing purposes. Check your console. Delete after you finished reading this. :-)
     },
@@ -41,6 +93,21 @@ var chopstick =
     }
 };
 
+var headerScroll = function()
+{
+    var $header = $('.js-header');
+
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 40) {
+            $header.addClass("shrink");
+        } else {
+            $header.removeClass("shrink");
+        }
+    });
+};
+
 var headerScrollSettings
 chopstick.headerScroll =
 {
@@ -65,30 +132,6 @@ chopstick.headerScroll =
             } else {
                 headerScrollSettings.headerScroll.removeClass("shrink");
             }
-        });
-    }
-};
-
-var hideSettings
-chopstick.hide =
-{
-    settings:
-    {
-        hide: $('.js-hide')
-    },
-
-    init: function()
-    {
-        hideSettings = chopstick.hide.settings;
-        chopstick.hide.hideContent();
-    },
-
-    hideContent: function ()
-    {
-        hideSettings.hide.on('click', function(e)
-        {
-            e.preventDefault();
-            $(this).closest(hideSettings.hide).parent().addClass('is-hidden');
         });
     }
 };
@@ -148,41 +191,8 @@ chopstick.ready =
     }
 };
 
-var toggleSettings
-chopstick.toggle =
-{
-    settings:
-    {
-        showHideToggle: $('.js-show-hide')
-    },
-
-    init: function()
-    {
-        // Initialize toggle settings
-        toggleSettings = chopstick.toggle.settings;
-        // Bind toggle events
-        chopstick.toggle.bindUIEvents();
-    },
-
-    bindUIEvents: function()
-    {
-        // Bind show hide event
-        toggleSettings.showHideToggle.on('touchstart click', function(e){
-            var trigger = $(this);
-            // Check if action needs to be prevented
-            if (trigger.data("action") == "none") {
-                e.preventDefault();
-            }
-            chopstick.toggle.showHide(trigger.data("target-selector"));
-            trigger.toggleClass('is-toggled');
-        });
-    },
-
-    showHide: function(targets)
-    {
-        //  Toggle the 'is-hidden' class
-        $(targets).toggleClass('is-hidden');
-    }
-};
-
-$(chopstick.init);
+// Load all your plugins in the pluginLoader function.
+var pluginLoader = function() {
+    $(chopstick.init);
+}
+pluginLoader();
