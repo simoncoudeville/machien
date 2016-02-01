@@ -14,7 +14,7 @@ if (Modernizr.history) {
             prefetch: true,
             cacheLength: 2,
             onStart: {
-                duration: 500, // Duration of our animation
+                duration: 400, // Duration of our animation
                 render: function ($container) {
                     // Add your CSS animation reversing class
                     $container.removeClass('is-finished');
@@ -100,7 +100,7 @@ var headerScroll = function()
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
 
-        if (scroll >= 40) {
+        if (scroll >= 60) {
             $header.addClass("shrink");
         } else {
             $header.removeClass("shrink");
