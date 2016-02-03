@@ -33,13 +33,14 @@ if (Modernizr.history) {
                     $container.addClass('is-finished');
                     // Inject the new content
                     $container.html($newContent);
-
+                    pluginLoader();
                 }
-            },
-            onAfter: function($container, $newContent) {
-                // load javascript
-                pluginLoader();
             }
+            // ,
+            // onAfter: function($container, $newContent) {
+            //     // load javascript
+            //     pluginLoader();
+            // }
         },
 
         smoothState = $('#js-smoothstate').smoothState(options).data('smoothState');
