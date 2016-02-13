@@ -81,7 +81,7 @@ var chopstick =
                         rightToLeft: false,
                         setGallerySize: false,
                         watchCSS: false,
-                        wrapAround: false
+                        wrapAround: true
                 });
 
                 // var flky = new Flickity( '.js-gallery', {
@@ -106,11 +106,11 @@ var chopstick =
                 //         wrapAround: false
                 // });
 
-                $gallery.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {
-                        if ( typeof cellIndex == 'number' ) {
-                                $gallery.flickity( 'select', cellIndex );
-                        }
-                });
+                // $gallery.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {
+                //         if ( typeof cellIndex == 'number' ) {
+                //                 $gallery.flickity( 'select', cellIndex );
+                //         }
+                // });
 
                 console.log("javascript is locked and loaded!") // for testing purposes. Check your console. Delete after you finished reading this. :-)
         },
