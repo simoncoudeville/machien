@@ -11,14 +11,15 @@
 
 // Base colors
 
-$color-alpha                : #36F !default;
-$color-beta                 : #f33 !default;
+$color-alpha                : #85d3ea !default;
+$color-beta                 : #ec1a6b !default;
+$color-gamma                : #35273d !default;
 
 $color-error                : #FF4136 !default;
 $color-success              : #2ECC40 !default;
 $color-notice               : #FF851B !default;
 
-$color-neutral              : hsl(hue($color-alpha),5,50) !default;
+$color-neutral              : hsl(hue($color-gamma),saturation($color-gamma),50) !default;
 
 // Palettes
 $palettes: (
@@ -33,7 +34,7 @@ $palettes: (
         x-dark              : hsl(hue($color-neutral),saturation($color-neutral),27.5),
         xx-dark             : hsl(hue($color-neutral),saturation($color-neutral),20),
         xxx-dark            : hsl(hue($color-neutral),saturation($color-neutral),12.5),
-        xxxx-dark           : hsl(hue($color-neutral),saturation($color-neutral),2.5)
+        xxxx-dark           : hsl(hue($color-neutral),saturation($color-neutral),7.5)
     ),
     color-alpha: (
         xxx-light           : hsl(hue($color-alpha),saturation($color-alpha),lightness($color-alpha + 90)),

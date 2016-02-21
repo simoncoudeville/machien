@@ -14,17 +14,17 @@
         @include padding-lr($columns-gutter * 2, $columns-gutter * 2);
     }
 
-    @include mq(bp5) {
-        @include padding-lr($columns-gutter * 3, $columns-gutter * 3);
-    }
+    //@include mq(bp5) {
+    //    @include padding-lr($columns-gutter * 3, $columns-gutter * 3);
+    //}
 
-    @include mq(bp6) {
-        @include padding-lr($columns-gutter * 4, $columns-gutter * 4);
-    }
+    //@include mq(bp6) {
+    //    @include padding-lr($columns-gutter * 4, $columns-gutter * 4);
+    //}
 
-    @include mq(bp7) {
-        @include padding-lr($columns-gutter * 5, $columns-gutter * 5);
-    }
+    //@include mq(bp7) {
+    //    @include padding-lr($columns-gutter * 5, $columns-gutter * 5);
+    //}
 }
 
 .c-row--sm {
@@ -67,19 +67,9 @@
     padding-right: 0;
 }
 
-.c-row--top {
-    @include mq(bp3) {
-        @include padding-top($alpha-leading * 2);
-    }
-}
-
 .c-row--lg {
     @include mq(bp3) {
         @include padding-tb(4,3);
-    }
-
-    @include mq(bp5) {
-        @include padding-lr(4,4);
     }
 
     @include mq(bp6) {
@@ -93,15 +83,13 @@
     }
 
     @include mq(bp5) {
-        @include padding-lr(4,4);
-    }
-
-    @include mq(bp5) {
         @include padding-tb(12,13);
     }
 }
 
-.c-row--full {
-    height: calc(90vh - 7.5rem);
-    @include padding-tb(1,1);
+.c-row--top {
+    @include mq(bp3) {
+        padding-top: 0;
+        //@include padding-top($alpha-leading * 2);
+    }
 }

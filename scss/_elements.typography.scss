@@ -21,13 +21,13 @@ $h1-font-family                : $alpha-font-family !default;
 $h1-font-weight                : $delta-font-weight !default;
 $h1-margin-bottom              : $beta-leading !default;
 
-$h2-font-family                : $alpha-font-family !default;
-$h2-font-weight                : $alpha-font-weight !default;
+$h2-font-family                : $beta-font-family !default;
+$h2-font-weight                : $delta-font-weight !default;
 $h2-margin-bottom              : $alpha-leading !default;
 
-$h3-font-family                : $alpha-font-family !default;
-$h3-font-weight                : $alpha-font-weight !default;
-$h3-margin-bottom              : $alpha-leading !default;
+$h3-font-family                : $beta-font-family !default;
+$h3-font-weight                : $delta-font-weight !default;
+$h3-margin-bottom              : $alpha-leading / 2 !default;
 
 $h4-font-family                : $alpha-font-family !default;
 $h4-font-weight                : $alpha-font-weight !default;
@@ -94,6 +94,7 @@ h1 {
 h2 {
     font-family: $h2-font-family;
     font-weight: $h2-font-weight;
+    @include uppercase;
     @include ms2;
     @include margin-bottom($h2-margin-bottom);
 }
@@ -101,7 +102,8 @@ h2 {
 h3 {
     font-family: $h3-font-family;
     font-weight: $h3-font-weight;
-    @include ms1;
+    @include uppercase;
+    @include ms0;
     @include margin-bottom($h3-margin-bottom);
 }
 

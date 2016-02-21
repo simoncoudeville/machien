@@ -19,11 +19,13 @@ $logo-width-lg:  $logo-height-lg * $logo-ratio;
 .c-logo {
     margin-bottom: 0;
     font-weight: $delta-font-weight;
+    font-family: $beta-font-family;
     color: palette(color-neutral, x-dark);
     display: flex;
     justify-content: center;
     align-items: center;
-    backface-visibility: hidden;
+    //@include ms4;
+    @include text-dimensions($ms4,1);
     @include uppercase;
 
     .c-header & {
@@ -37,45 +39,16 @@ $logo-width-lg:  $logo-height-lg * $logo-ratio;
 
     .c-logo__link {
         display: block;
-        //height: 5rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        @include text-dimensions($alpha-font-size,1);
-    }
 
-    .c-logo__mark {
-        display: block;
-        width: $logo-width-sm;
-        height: $logo-height-sm;
-        background: transparent url(../img/svg/glasses.svg) 50% 50% no-repeat;
-        background-size: contain;
-        transition: all $animation-duration-beta $animation-easing-alpha;
-        transition-delay: $animation-duration-beta;
-        transform: rotate(-10deg);
-
-        .shrink & {
-            transform: rotate(0deg);
-
-            .is-exiting & {
-                transform: rotate(-10deg);
-                //transition-delay: $animation-duration-delta;
-            }
-
-            .is-finished & {
-                transition-delay: $animation-duration-beta;
-            }
+        &,
+        &:visited {
+            color: $color-gamma;
         }
 
-        @include mq(bp4) {
-            width: $logo-width-lg;
-            height: $logo-height-lg;
+        &:hover {
+            text-decoration: none;
         }
-
     }
-
-.c-nerdlab {
-    //font-family: $beta-font-family;
-    font-weight: $delta-font-weight;
-    @include uppercase;
-}

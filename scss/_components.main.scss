@@ -33,26 +33,40 @@
 }
 
 .c-main {
-    //background-color: palette(color-alpha,xxx-light);
     backface-visibility: hidden;
     animation-fill-mode: both;
     animation-duration: $animation-duration-alpha;
     animation-name: mainTransitionIn;
-    //animation-name: fadeIn;
     animation-timing-function: $animation-easing-alpha;
-    //animation-timing-function: $ease-out-sine;
-    @include padding-top($alpha-leading * 3);
+    //@include padding-top(5);
 
     .is-exiting & {
-        //animation-timing-function: $ease-in-sine;
         animation-name: mainTransitionOut;
-        //animation-direction: reverse;
     }
 
-    @include mq(bp4) {
-        @include padding-top($alpha-leading * 5);
+    //@include mq(bp3) {
+    //    @include padding-top(8);
+    //}
+}
+
+.c-main--page {
+    @include padding-top(5);
+
+    @include mq(bp3) {
+        @include padding-top(8);
+    }
+}
+
+.c-main--home {
+    @include padding-top(5);
+
+    @include mq(bp3) {
+        @include padding-top(8);
     }
 
+    @include mq(bp5) {
+        padding-top: 0;
+    }
 }
 
 .c-main-section {
@@ -61,16 +75,4 @@
             @include padding-top($alpha-leading);
         }
     }
-
-    //@include mq(bp5) {
-    //    & + & {
-    //        @include padding-top($alpha-leading * 2);
-    //    }
-    //}
-
-    //@include mq(bp6) {
-    //    & + & {
-    //        @include padding-top($alpha-leading * 3);
-    //    }
-    //}
 }

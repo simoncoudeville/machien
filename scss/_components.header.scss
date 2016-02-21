@@ -5,8 +5,7 @@
 */
 
 .c-header-row {
-    background-color: palette(color-neutral,xxxx-light);
-    //background-color: rgba(palette(color-neutral,xxxx-light),.95);
+    background-color: palette(color-alpha);
     position: fixed;
     padding-top: 0;
     top: 0;
@@ -15,21 +14,15 @@
     backface-visibility: hidden;
     transition: all $animation-duration-beta $animation-easing-alpha;
 
-    .is-finished & {
-    }
-
-    .is-exiting & {
-    }
-
-    @include mq(bp4) {
-        @include padding-tb($alpha-leading,$alpha-leading);
+    @include mq(bp3) {
+        @include padding-tb($alpha-leading * 2, $alpha-leading * 2);
 
         &.shrink {
-            padding-top: 0;
-            padding-bottom: 0;
+            @include padding-tb($alpha-leading,$alpha-leading);
 
             .is-exiting & {
-                @include padding-tb($alpha-leading,$alpha-leading);
+                background-color: transparent;
+                @include padding-tb($alpha-leading * 2, $alpha-leading * 2);
             }
         }
     }
@@ -37,6 +30,5 @@
 
 .c-header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
 }

@@ -7,11 +7,11 @@
 .c-nav-main {
     display: none;
 
-    @include mq(bp4) {
+    @include mq(bp3) {
         display: block;
         display: flex;
-        flex-basis: 50%;
-        @include padding-left($columns-gutter);
+        flex-basis: 100%;
+        @include padding-left($columns-gutter * 2);
     }
 
     &.is-visible {
@@ -19,9 +19,8 @@
     }
 
     .c-header & {
-
         @if $flexbox == false {
-            @include mq(bp4) {
+            @include mq(bp3) {
                 float: right;
             }
         }
@@ -32,15 +31,15 @@
         border: 1px solid palette(color-neutral,xx-light);
         border-width: 1px 0;
         margin-bottom: 0;
+        display: flex;
+        align-items: center;
 
-        @include mq(bp4) {
+        @include mq(bp3) {
             border: 0;
 
             @if $flexbox {
                 display: flex;
-                width: 100%;
-                justify-content: space-between;
-                //justify-content: flex-end;
+                flex-basis: 100%;
             }
         }
     }
@@ -56,14 +55,14 @@
             display: none;
         }
 
-        @include mq(bp4) {
+        @include mq(bp3) {
             @if $flexbox == false {
                 float: left;
             }
 
             & + & {
                 border-top: 0;
-                //@include margin-left($columns-gutter*2);
+                @include margin-left($columns-gutter);
             }
 
             .c-header & {
@@ -72,23 +71,27 @@
         }
     }
 
+    //.c-nav-main__item--cta {
+    //    margin-left: auto !important;
+    //}
+
     .c-nav-main__link {
         display: block;
         color: palette(color-alpha);
         text-decoration: none;
-        font-family: $beta-font-family;
-        //font-weight: $delta-font-weight;
-        @include text-dimensions($ms0,1,0,1,1);
 
-        @include mq(bp4) {
-            @include padding-tb($alpha-leading,$alpha-leading);
+        @include mq(bp3) {
+            //@include padding-tb($alpha-leading,$alpha-leading);
+            //@include text-dimensions($ms-3,1);
             @include text-dimensions($ms-1,1);
+            //@include text-dimensions($ms-2,1);
             //@include padding-lr($alpha-leading,$alpha-leading);
         }
 
         &,
         &:visited {
-            color: palette(color-neutral,xx-dark);
+            //color: palette(color-neutral,xxx-dark);
+            color: $color-gamma;
         }
 
         &:hover,
@@ -97,6 +100,34 @@
             text-decoration: none;
             color: palette(color-beta);
             //color: palette(color-neutral,xx-dark);
+        }
+    }
+
+    .c-nav-main__link--cta {
+        //background-color: palette(color-beta);
+        //background-color: palette(color-neutral,xxx-dark);
+        //border-color: palette(color-neutral,x-dark);
+        //font-family: $beta-font-family;
+        //font-weight: $delta-font-weight;
+        //@include uppercase;
+        //font-family: $beta-font-family;
+        //border-radius: 50px;
+        //border-radius: 2px;
+        //@include padding-lr(1.5,1.5);
+        //@include padding-tb(.5,.5);
+        //@include padding-lr(.75,.75);
+        //@include padding-tb(.25,.25);
+        //@include text-dimensions($ms0,1);
+
+        &,
+        &:visited {
+            //color: palette(color-alpha);
+            //color: palette(color-beta);
+        }
+
+        &:hover,
+        &:focus {
+            background-color: palette(color-neutral,xx-dark);
         }
     }
 
@@ -114,7 +145,7 @@
         color: palette(color-neutral);
     }
 
-    @include mq(bp4) {
+    @include mq(bp3) {
         display: none;
     }
 }

@@ -43,6 +43,12 @@ $ms13                       : 100 !default;
 $alpha-font-family          : 'Suisse', sans-serif;
 $beta-font-family           : 'Suisse Mono', monospace;
 
+$alpha-font-family          : 'nimbus-sans', sans-serif;
+$beta-font-family           : 'nimbus-sans-condensed', sans-serif;
+$gamma-font-family          : 'nimbus-roman', serif;
+$delta-font-family          : 'source-code-pro', monospace;
+$delta-font-family          : 'Suisse Mono', monospace;
+
 //$alpha-font-family          : 'nudista-web', sans-serif;
 //$beta-font-family           : 'purista-web', monospace;
 
@@ -57,10 +63,10 @@ $alpha-font-size            : $ms0;
 $alpha-font-weight          : 200;
 $beta-font-weight           : 300;
 $gamma-font-weight          : 400;
-$delta-font-weight          : 600;
+$delta-font-weight          : 700;
 $jota-font-weight           : 700;
 
-$alpha-line-height          : 1.6;
+$alpha-line-height          : 1.8;
 
 $alpha-leading              : 1.6;
 $beta-leading               : 2;

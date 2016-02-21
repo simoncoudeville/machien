@@ -5,26 +5,30 @@
 */
 
 .c-intro {
+
     @include mq(bp3) {
-        min-height: 20rem;
-        height: calc(90vh - 5rem);
+        background: transparent url(../img/svg/visual.svg) bottom 0 left 0 no-repeat;
+        background-size: auto 16rem;
+        @include padding-bottom(20);
     }
 
-    @include mq(bp4) {
+    @include mq(bp5) {
+        min-height: 700px;
+        height: calc(100vh - 4rem);
         display: flex;
-        //align-items: center;
-        //justify-content: flex-end;
-        align-items: flex-end;
-        height: calc(90vh - 7.5rem);
-        //background: transparent url('../img/photos/alphabet.jpg') right 0 bottom 0 no-repeat;
-        //background-size: 356px 613px;
-
-        //background: url('../img/photos/alphabet.jpg') right 0 bottom -280px no-repeat transparent;
-        background-size: 445px 766px;
+        align-items: center;
+        padding-bottom: 0;
+        //background-size: 50%;
 
         .o-container {
             margin-left: 0;
             width: 100%;
         }
+    }
+}
+
+.c-intro__block {
+    @include mq(bp5) {
+        margin-left: auto;
     }
 }

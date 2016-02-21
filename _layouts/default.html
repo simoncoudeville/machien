@@ -12,13 +12,8 @@
         <!-- Page header -->
         {% include components.header.html %}
         <!-- End page header -->
-        <div class="c-main c-scene__main c-scene__element">
-
+        <div class="c-main{% if page.section %} c-main--{{ page.section }} {% endif%}c-scene__main c-scene__element">
             {{ content }}
-
-            <!-- Page footer -->
-            {% include components.footer.html %}
-            <!-- End page footer -->
         </div>
     </div>
     <!-- Footer javascript -->
