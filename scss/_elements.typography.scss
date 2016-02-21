@@ -96,6 +96,7 @@ h2 {
     font-weight: $h2-font-weight;
     @include uppercase;
     @include ms2;
+    //@include text-dimensions($ms2,1);
     @include margin-bottom($h2-margin-bottom);
 }
 

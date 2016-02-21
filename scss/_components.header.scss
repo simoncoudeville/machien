@@ -7,12 +7,12 @@
 .c-header-row {
     background-color: palette(color-alpha);
     position: fixed;
-    padding-top: 0;
     top: 0;
     right: 0;
     left: 0;
     backface-visibility: hidden;
     transition: all $animation-duration-beta $animation-easing-alpha;
+    @include padding-tb($alpha-leading, $alpha-leading);
 
     @include mq(bp3) {
         @include padding-tb($alpha-leading * 2, $alpha-leading * 2);
@@ -30,5 +30,12 @@
 
 .c-header {
     display: flex;
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include mq(bp4) {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
 }

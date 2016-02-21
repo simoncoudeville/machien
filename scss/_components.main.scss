@@ -8,13 +8,11 @@
     0% {
             opacity: 0;
             transform: translateY($alpha-leading * 1rem);
-            //transform: scale(0.99);
     }
 
     100% {
             opacity: 1;
             transform: translateY(0);
-            //transform: scale(1);
     }
 }
 
@@ -22,13 +20,11 @@
     0% {
             opacity: 1;
             transform: translateY(0);
-            //transform: scale(1);
     }
 
     100% {
             opacity: 0;
             transform: translateY($alpha-leading * 1rem);
-            //transform: scale(0.99);
     }
 }
 
@@ -38,15 +34,10 @@
     animation-duration: $animation-duration-alpha;
     animation-name: mainTransitionIn;
     animation-timing-function: $animation-easing-alpha;
-    //@include padding-top(5);
 
     .is-exiting & {
         animation-name: mainTransitionOut;
     }
-
-    //@include mq(bp3) {
-    //    @include padding-top(8);
-    //}
 }
 
 .c-main--page {
@@ -64,7 +55,7 @@
         @include padding-top(8);
     }
 
-    @include mq(bp5) {
+    @include mq(bp4) {
         padding-top: 0;
     }
 }

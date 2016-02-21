@@ -5,19 +5,22 @@
 */
 
 .c-intro {
+    background: transparent url(../img/svg/visual.svg) bottom 0 left 0 no-repeat;
+    background-size: auto 16rem;
+    @include padding-bottom(16);
 
     @include mq(bp3) {
-        background: transparent url(../img/svg/visual.svg) bottom 0 left 0 no-repeat;
-        background-size: auto 16rem;
-        @include padding-bottom(20);
+        @include padding-bottom(18);
     }
 
-    @include mq(bp5) {
+    @include mq(bp4) {
         min-height: 700px;
         height: calc(100vh - 4rem);
         display: flex;
         align-items: center;
-        padding-bottom: 0;
+        //background-size: 50% 50%;
+        @include padding-bottom(1);
+
         //background-size: 50%;
 
         .o-container {
@@ -28,7 +31,7 @@
 }
 
 .c-intro__block {
-    @include mq(bp5) {
+    @include mq(bp4) {
         margin-left: auto;
     }
 }

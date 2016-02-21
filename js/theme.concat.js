@@ -49,71 +49,13 @@ if (Modernizr.history) {
 
 var chopstick =
 {
-        // init, something like a constructor
-        init: function()
-        {
-                // chopstick.loadObject(chopstick.mobileNav, 'chopstick.mobileNav');
-                // chopstick.loadObject(chopstick.headerScroll, 'chopstick.headerScroll');
-                // chopstick.loadObject(chopstick.ready, 'chopstick.ready');
-
-                // chopstick.mobileNav;
-                // chopstick.headerScroll;
-                // chopstick.ready;
-
-                headerScroll();
-
-                var $gallery = $('.js-gallery').flickity({
-                        accessibility: true,
-                        autoPlay: false,
-                        cellAlign: 'left',
-                        cellSelector: undefined,
-                        contain: true,
-                        draggable: true,
-                        freeScroll: false,
-                        selectedAttraction: 0.2,
-                        friction: 0.8,
-                        initialIndex: 0,
-                        lazyLoad: true,
-                        percentPosition: true,
-                        prevNextButtons: false,
-                        pageDots: false,
-                        resize: true,
-                        rightToLeft: false,
-                        setGallerySize: false,
-                        watchCSS: false,
-                        wrapAround: true
-                });
-
-                // var flky = new Flickity( '.js-gallery', {
-                //         accessibility: true,
-                //         autoPlay: false,
-                //         cellAlign: 'left',
-                //         cellSelector: undefined,
-                //         contain: true,
-                //         draggable: true,
-                //         freeScroll: false,
-                //         selectedAttraction: 0.2,
-                //         friction: 0.8,
-                //         initialIndex: 0,
-                //         lazyLoad: true,
-                //         percentPosition: true,
-                //         prevNextButtons: false,
-                //         pageDots: false,
-                //         resize: true,
-                //         rightToLeft: false,
-                //         setGallerySize: false,
-                //         watchCSS: false,
-                //         wrapAround: false
-                // });
-
-                // $gallery.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {
-                //         if ( typeof cellIndex == 'number' ) {
-                //                 $gallery.flickity( 'select', cellIndex );
-                //         }
-                // });
-
-                console.log("javascript is locked and loaded!") // for testing purposes. Check your console. Delete after you finished reading this. :-)
-        },
+    // init, something like a constructor
+    init: function()
+    {
+        mobileNav();
+        // chopstick.headerScroll;
+        headerScroll();
+    },
 };
 
 var headerScroll = function()
@@ -123,7 +65,7 @@ var headerScroll = function()
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
 
-        if (scroll >= 70) {
+        if (scroll >= 1) {
             $header.addClass("shrink");
         } else {
             $header.removeClass("shrink");
@@ -133,39 +75,13 @@ var headerScroll = function()
 
 var mobileNav = function()
 {
-    var $navItem = $('.js-nav-main-item');
-};
+    var nav = $('.js-nav');
+    var navTrigger = $('.js-nav-trigger');
 
-var mobileNavSettings
-chopstick.mobileNav =
-{
-    settings:
-    {
-        navigation: $('.js-nav'),
-        trigger: $('.js-nav-trigger')
-    },
-
-    init: function()
-    {
-        // Initialize mobile nav settings
-        mobileNavSettings = chopstick.mobileNav.settings;
-        // Bind toggle events
-        chopstick.mobileNav.bindUIEvents();
-    },
-
-    bindUIEvents: function()
-    {
-        mobileNavSettings.trigger.on('click', function() {
-            chopstick.mobileNav.toggleNavigation();
-        });
-    },
-
-    // build mobile nav
-    toggleNavigation: function()
-    {
-        mobileNavSettings.navigation.toggleClass('is-visible');
-        mobileNavSettings.trigger.toggleClass('is-active');
-    }
+    navTrigger.on('click', function() {
+        nav.toggleClass('is-visible');
+        $(this).toggleClass('is-active');
+    });
 };
 
 var readySettings

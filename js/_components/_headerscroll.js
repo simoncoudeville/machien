@@ -5,7 +5,7 @@ var headerScroll = function()
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
 
-        if (scroll >= 70) {
+        if (scroll >= 1) {
             $header.addClass("shrink");
         } else {
             $header.removeClass("shrink");
