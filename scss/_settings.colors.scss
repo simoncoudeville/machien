@@ -56,6 +56,16 @@ $palettes: (
         x-dark              : hsl(hue($color-beta),saturation($color-beta),lightness($color-beta - 50)),
         xx-dark             : hsl(hue($color-beta),saturation($color-beta),lightness($color-beta - 75))
     ),
+    color-gamma: (
+        xxx-light           : hsl(hue($color-gamma),saturation($color-gamma),lightness($color-gamma + 90)),
+        xx-light            : hsl(hue($color-gamma),saturation($color-gamma),lightness($color-gamma + 75)),
+        x-light             : hsl(hue($color-gamma),saturation($color-gamma),lightness($color-gamma + 50)),
+        light               : hsl(hue($color-gamma),saturation($color-gamma),lightness($color-gamma + 25)),
+        base                : $color-gamma,
+        dark                : hsl(hue($color-gamma),saturation($color-gamma),lightness($color-gamma - 25)),
+        x-dark              : hsl(hue($color-gamma),saturation($color-gamma),lightness($color-gamma - 50)),
+        xx-dark             : hsl(hue($color-gamma),saturation($color-gamma),lightness($color-gamma - 75))
+    ),
     color-error: (
         light               : hsl(hue($color-error),70,60),
         base                : $color-error,

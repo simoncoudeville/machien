@@ -9,6 +9,7 @@
     width: 100%;
     height: 0;
     align-items: center;
+    //font-family: $gamma-font-family;
 
     @include mq(bp4) {
         display: flex;
@@ -55,6 +56,7 @@
         text-decoration: none;
 
         @include mq(bp4) {
+            //@include text-dimensions($ms-2,1);
             @include text-dimensions($ms-1,1);
         }
 
@@ -79,6 +81,8 @@
     border: none;
     background-color: transparent;
     padding: 0;
+    top: -1px;
+    position: relative;
 
     &.is-active {
         color: palette(color-neutral);
@@ -90,7 +94,7 @@
 }
 
 $trigger-line-height:        3px;
-$trigger-line-offset:        .475rem;
+$trigger-line-offset:        7.5px;
 $trigger-color:              palette(color-neutral,xx-dark);
 $trigger-active-color:       palette(color-neutral,xx-dark);
 $trigger-animation-duration: $animation-duration-gamma;
@@ -98,7 +102,7 @@ $trigger-animation-duration: $animation-duration-gamma;
 .c-nav-main-trigger__icon {
     position: relative;
     display: block;
-    width: 1.5rem;
+    width: 22px;
     height: $trigger-line-height;
     background-color: $trigger-color;
     transition-property: all;
@@ -117,10 +121,12 @@ $trigger-animation-duration: $animation-duration-gamma;
     }
 
     &:before {
+        //width: 20px;
         transform: translateY($trigger-line-offset * -1);
     }
 
     &:after {
+        //width: 18px;
         transform: translateY($trigger-line-offset);
     }
 
@@ -128,10 +134,12 @@ $trigger-animation-duration: $animation-duration-gamma;
         transform: rotate(45deg);
 
         &:before {
+            //width: 22px;
             transform: rotate(90deg);
         }
 
         &:after {
+            //width: 22px;
             transform: rotate(90deg);
         }
     }

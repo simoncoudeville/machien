@@ -38,6 +38,8 @@
     box-shadow: none;
     //font-weight: $jota-font-weight;
     font-family: $beta-font-family;
+    @include uppercase;
+    //font-family: $gamma-font-family;
     -webkit-font-smoothing: antialiased; /* [4] */
     -moz-osx-font-smoothing: grayscale; /* [4] */
 
@@ -91,7 +93,7 @@
 
 .c-button--lg {
     @include padding-lr(1.25,1.25);
-    @include text-dimensions($alpha-font-size,1,0,$alpha-leading/2,$alpha-leading/2);
+    @include text-dimensions($alpha-font-size,1,0,.5,.5);
 }
 
 // Button colors
@@ -130,6 +132,26 @@
     &:focus {
         background-color: palette(color-beta,light);
         color: palette(color-neutral,x-light);
+    }
+
+    &:active {
+        background-color: palette(color-beta);
+    }
+}
+
+.c-button--beta-dark {
+    background-color: palette(color-beta);
+    border-color: palette(color-beta);
+
+    &,
+    &:visited {
+        color: palette(color-neutral,xxx-dark);
+    }
+
+    &:hover,
+    &:focus {
+        background-color: palette(color-beta,light);
+        color: palette(color-neutral,xxx-dark);
     }
 
     &:active {

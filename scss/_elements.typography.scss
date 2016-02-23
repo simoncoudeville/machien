@@ -67,8 +67,8 @@ $link-transition               : all $animation-duration-alpha $animation-easing
 $link-decoration               : none !default;
 $link-decoration--hover        : underline !default;
 
-$link-color                    : palette(color-alpha) !default;
-$link-color--visited           : palette(color-alpha) !default;
+$link-color                    : palette(color-beta) !default;
+$link-color--visited           : palette(color-beta) !default;
 $link-color--hover             : palette(color-beta) !default;
 $link-color--focus             : palette(color-beta,dark) !default;
 
