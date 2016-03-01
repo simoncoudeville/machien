@@ -25,9 +25,9 @@ $color-neutral              : hsl(hue($color-gamma),saturation($color-gamma),50)
 $palettes: (
     color-neutral: (
         xxxx-light          : hsl(hue($color-neutral),saturation($color-neutral),100),
-        xxx-light           : hsl(hue($color-neutral),saturation($color-neutral),95),
-        xx-light            : hsl(hue($color-neutral),saturation($color-neutral),87.5),
-        x-light             : hsl(hue($color-neutral),saturation($color-neutral),75),
+        xxx-light           : hsl(hue($color-neutral),saturation($color-neutral) - 10,95),
+        xx-light            : hsl(hue($color-neutral),saturation($color-neutral) - 10,87.5),
+        x-light             : hsl(hue($color-neutral),saturation($color-neutral) - 10,75),
         light               : hsl(hue($color-neutral),saturation($color-neutral),62.5),
         base                : $color-neutral,
         dark                : hsl(hue($color-neutral),saturation($color-neutral),37.5),

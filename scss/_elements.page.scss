@@ -13,8 +13,9 @@ $html-font-weight                   : $gamma-font-weight !default;
 $html-font-size                     : $alpha-font-size !default;
 $html-line-height                   : $alpha-line-height !default;
 
-$html-background-color              : palette(color-alpha) !default;
-//$body-color                         : palette(color-neutral,xxx-dark) !default;
+//$html-background-color              : palette(color-alpha) !default;
+$html-background-color                         : palette(color-neutral,xxx-dark) !default;
+$body-background-color              : palette(color-alpha) !default;
 $body-color                         : $color-gamma;
 
 $body-font-smoothing                : true !default;
@@ -49,6 +50,7 @@ html {
 
 body {
     color: $body-color;
+    background-color: $body-background-color;
     text-rendering: optimizeLegibility;
     font-feature-settings: "kern";
 

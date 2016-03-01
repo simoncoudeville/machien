@@ -6,27 +6,34 @@
 
 .c-intro {
     background: transparent url(../img/svg/visual.svg) bottom 0 left 0 no-repeat;
-    background-size: auto 16rem;
-    @include padding-bottom(16);
+    background-size: auto 12rem;
+    @include padding-bottom(14);
 
     @include mq(bp3) {
+        background-size: auto 16rem;
         @include padding-bottom(18);
     }
 
     @include mq(bp4) {
-        min-height: 700px;
-        height: calc(100vh - 4rem);
+        min-height: 500px;
+        height: calc(85vh - 4rem);
         display: flex;
         align-items: center;
-        //background-size: 50% 50%;
+        background-size: auto 12rem;
         @include padding-bottom(1);
-
-        //background-size: 50%;
 
         .o-container {
             margin-left: 0;
             width: 100%;
         }
+    }
+
+    @include mq(bp5) {
+        background-size: auto 14rem;
+    }
+
+    @include mq(bp7) {
+        background-size: auto 16rem;
     }
 }
 
