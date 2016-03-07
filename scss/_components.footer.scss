@@ -4,6 +4,10 @@
     The footer of the website
 */
 
+.c-footer {
+    border-top: 1px solid palette(color-neutral,xx-dark);
+}
+
 .c-footer-link {
     &,
     &:visited {

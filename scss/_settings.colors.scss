@@ -24,17 +24,17 @@ $color-neutral              : hsl(hue($color-gamma),saturation($color-gamma),50)
 // Palettes
 $palettes: (
     color-neutral: (
-        xxxx-light          : hsl(hue($color-neutral),saturation($color-neutral),100),
-        xxx-light           : hsl(hue($color-neutral),saturation($color-neutral) - 10,95),
-        xx-light            : hsl(hue($color-neutral),saturation($color-neutral) - 10,87.5),
-        x-light             : hsl(hue($color-neutral),saturation($color-neutral) - 10,75),
-        light               : hsl(hue($color-neutral),saturation($color-neutral),62.5),
-        base                : $color-neutral,
-        dark                : hsl(hue($color-neutral),saturation($color-neutral),37.5),
-        x-dark              : hsl(hue($color-neutral),saturation($color-neutral),27.5),
-        xx-dark             : hsl(hue($color-neutral),saturation($color-neutral),20),
-        xxx-dark            : hsl(hue($color-neutral),saturation($color-neutral),12.5),
-        xxxx-dark           : hsl(hue($color-neutral),saturation($color-neutral),7.5)
+        xxxx-light          : hsl(hue($color-gamma),saturation($color-gamma),100),
+        xxx-light           : hsl(hue($color-gamma),saturation($color-gamma) - 15,95),
+        xx-light            : hsl(hue($color-gamma),saturation($color-gamma) - 15,87.5),
+        x-light             : hsl(hue($color-gamma),saturation($color-gamma) - 15,75),
+        light               : hsl(hue($color-gamma),saturation($color-gamma) - 15,62.5),
+        base                : hsl(hue($color-gamma),saturation($color-gamma) - 15,50),
+        dark                : hsl(hue($color-gamma),saturation($color-gamma) - 15,37.5),
+        x-dark              : hsl(hue($color-gamma),saturation($color-gamma) - 15,27.5),
+        xx-dark             : hsl(hue($color-gamma),saturation($color-gamma),20),
+        xxx-dark            : hsl(hue($color-gamma),saturation($color-gamma),12.5),
+        xxxx-dark           : hsl(hue($color-gamma),saturation($color-gamma),7.5)
     ),
     color-alpha: (
         xxx-light           : hsl(hue($color-alpha),saturation($color-alpha),lightness($color-alpha + 90)),
