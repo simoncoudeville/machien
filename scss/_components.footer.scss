@@ -8,17 +8,8 @@
     border-top: 1px solid palette(color-neutral,xx-dark);
 }
 
-.c-footer-link {
-    &,
-    &:visited {
-        //text-decoration: underline;
-        font-weight: $delta-font-weight;
-        color: palette(color-neutral,xxxx-light);
+    .c-footer__logo {
+        height: 40px;
+        width: auto;
+        opacity: .5;
     }
-
-    &:hover {
-        text-decoration: none;
-        opacity: .75;
-        color: palette(color-neutral,xxxx-light);
-    }
-}
