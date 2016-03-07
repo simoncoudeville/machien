@@ -1,7 +1,19 @@
-<footer class="c-row c-footer u-bgcolor-neutral-xxx-dark u-z-delta">
+<footer class="c-row c-row--sm c-footer u-bgcolor-neutral-xxx-dark u-z-delta">
     <div class="o-container">
-        <p class="u-color-neutral-base">
-            &copy;{{ site.time | date: '%Y' }} Machien is een initiatief van Het Entrepot en Nerdlab.
-        </p>
+        <div class="o-grid o-grid--gutter o-flex o-flex--wrap o-flex--justify-space-between">
+            <p class="o-grid__item u-color-neutral-base u-ms-1">
+                &copy;{{ site.time | date: '%Y' }} Machien is een initiatief van Het Entrepot en Nerdlab.
+            </p>
+            <div class="o-grid__item">
+                <div class="o-grid o-grid--gutter o-flex o-flex--wrap">
+                    <p class="o-grid__item">
+                        <img src="img/logos/logo-nerdlab.png" alt="" class="c-footer__logo">
+                    </p>
+                    <p class="o-grid__item">
+                        <img src="img/logos/logo-entrepot.png" alt="" class="c-footer__logo">
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 </footer>
