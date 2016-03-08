@@ -1,4 +1,4 @@
 title: 'Machien'
 author: 'Nerdlab'
-description: 'Honderden schakels om iets heel eenvoudig te doen, dat is pas een machien. Rube Goldberg bouwde machines met grote complexiteit en beperkte meerwaarde. Denk aan het starten een motor of het omslaan van een bladzijde. Ok Go de rollende knikkers, blazende ventilators en de brandende koorden tot kunst.'
+description: 'Honderden schakels om iets heel eenvoudig te doen, dat is pas een machien. Rube Goldberg bouwde machines met grote complexiteit en beperkte meerwaarde. Denk aan het starten van een motor of het omslaan van een bladzijde. Ok Go verhief de rollende knikkers, blazende ventilators en de brandende koorden tot kunst.'
 exclude: ['_site','scss','*scss','Gem*','Guard*','*rb','.sass-cache','.git*','config.rb','*.md','*.json','docroot','node_modules','gulpfile.js','install.sh','lint.yml']
