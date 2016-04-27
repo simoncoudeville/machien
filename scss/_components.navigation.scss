@@ -7,24 +7,23 @@
 .c-nav-main {
     display: none;
     width: 100%;
-    height: 0;
+    //height: 0;
     align-items: center;
     //font-family: $gamma-font-family;
 
     @include mq(bp4) {
         display: flex;
         width: auto;
-        height: auto;
         @include padding-left($columns-gutter * 2);
+
+        //@include mq(bp4) {
+            flex: 1;
+        //}
     }
 
     &.is-visible {
         display: flex;
-        height: calc(100vh - 5rem);
-
-        @include mq(bp4) {
-            height: auto;
-        }
+        @include padding-top($alpha-leading);
     }
 }
 
@@ -54,6 +53,7 @@
         display: block;
         color: palette(color-alpha);
         text-decoration: none;
+        opacity: .5;
 
         @include mq(bp4) {
             //@include text-dimensions($ms-2,1);
@@ -68,6 +68,7 @@
         &:hover,
         &:focus,
         .is-selected & {
+            opacity: 1;
             text-decoration: none;
             color: palette(color-beta);
         }

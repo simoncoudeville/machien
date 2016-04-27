@@ -1,11 +1,17 @@
 <div class="js-header c-row c-header-row u-z-jota">
     <div class="o-container c-header-container">
         <div class="c-header">
-            {% include components.logo.html %}
+            <div class="c-header__brand">
+                {% include components.logo.html %}
+                <p class="c-header__date">
+                    6 mei - Entrepot Brugge
+                </p>
+            </div>
             <button class="c-nav-main-trigger js-nav-trigger">
                 <span class="c-nav-main-trigger__icon"></span>
                 <span class="is-accessible-hidden">Menu</span>
             </button>
+
             {% include components.nav-main.html %}
         </div>
     </div>

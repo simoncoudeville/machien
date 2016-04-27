@@ -44,7 +44,7 @@
     @include padding-top(5);
 
     @include mq(bp3) {
-        @include padding-top(8);
+        @include padding-top(7);
     }
 }
 
@@ -52,11 +52,11 @@
     @include padding-top(5);
 
     @include mq(bp3) {
-        @include padding-top(8);
+        @include padding-top(7);
     }
 
     @include mq(bp4) {
-        padding-top: 0;
+        @include padding-top(3);
     }
 }
 
@@ -64,6 +64,14 @@
     @include mq(bp3) {
         & + & {
             @include padding-top($alpha-leading);
+        }
+    }
+}
+
+.c-main-section-lg {
+    @include mq(bp3) {
+        & + & {
+            @include padding-top($alpha-leading * 3);
         }
     }
 }

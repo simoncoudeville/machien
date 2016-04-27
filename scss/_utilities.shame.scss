@@ -7,3 +7,46 @@
 .c-event-list {
     display: flex;
 }
+
+.c-participants {
+    margin-bottom: 0;
+    @include margin-lr(-1,-1);
+}
+
+    .c-participants__item {
+        @include margin-lr(1,1);
+        @include margin-bottom(2);
+    }
+
+    .c-participants__link {
+        display: block;
+
+        &:focus,
+        &:hover {
+            opacity: .75;
+        }
+    }
+
+    .c-participants__logo {
+        height: 50px;
+
+        @include mq(bp3) {
+            height: 100px;
+        }
+    }
+
+.c-cta {
+    border-top: 1px solid palette(color-neutral,xx-dark);
+}
+
+    .c-cta__section {
+
+        @include mq(bp4,max) {
+            //background-color: red;
+
+            & + & {
+                @include padding-top(1);
+            }
+
+        }
+    }

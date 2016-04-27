@@ -27,6 +27,12 @@
     margin-right: auto;
 }
 
+.u-align-right-bp4 {
+    @include mq(bp4) {
+        margin-left: auto;
+    }
+}
+
 // text align
 
 .u-text-align-center {
